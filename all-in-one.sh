@@ -60,7 +60,7 @@ export GEM_HOME=`pwd`/.bundled_gems
 gem install bundler --no-rdoc --no-ri --verbose
 
 set -e
-./run_tests.sh
+bash run_tests.sh
 RESULT=$?
 set +e
 if [ $RESULT -ne 0 ]; then
@@ -86,7 +86,7 @@ OpenStack Dashboard available: http://127.0.0.1/${DASHBOARD}
 To access through Horizon, use the following user/password:
   admin / a_big_secret
 To use OpenStack through the CLI, run:
-  source ~/openrc
+  source openrc
 
 EOF
 print_header 'Done (all-in-one.sh)'
