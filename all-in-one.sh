@@ -60,7 +60,7 @@ export GEM_HOME=`pwd`/.bundled_gems
 gem install bundler --no-rdoc --no-ri --verbose
 
 set -e
-bash run_tests.sh
+bash /puppet-openstack-integration/run_tests.sh
 RESULT=$?
 set +e
 if [ $RESULT -ne 0 ]; then
